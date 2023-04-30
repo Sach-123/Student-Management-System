@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>Sms App</title>
+		<style>
+			* {font-size:40px;font-family:Calibri}
+			body {background-color:lightblue;}
+		</style>
+	</head>
+	<body>
+		<center>
+			<h1>Home Page</h1>
+			<a href="{% url 'create' %}"> Create Student </a>
+			<table border="5" style="width:50%;">
+				<tr>
+					<th>Rno</th>
+					<th>Name</th>
+					<th>Marks</th>
+				</tr>
+			{% for d in data %}
+				<tr>
+					<td>{{d.rno}}</td>
+					<td>{{d.name}}</td>
+					<td>{{d.marks}}</td>
+				</tr>
+			{% endfor %}
+			</table>
+		</center>
+	</body>
+</html>

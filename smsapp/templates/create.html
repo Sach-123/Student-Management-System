@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>Sms App</title>
+		<style>
+			* {font-size:40px;font-family:Calibri}
+			body {background-color:lightblue;}
+		</style>
+	</head>
+	<body>
+		<center>
+			<h1>Create Page</h1>
+			<a href="{% url 'home' %}"> Home </a>
+			<form method="POST">
+				{% csrf_token %}
+				<table>
+					{{fm.as_table}}
+				</table>
+				<input type="submit"/>
+			</form>
+			{{msg}}
+		</center>
+	</body>
+</html>
