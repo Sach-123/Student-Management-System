@@ -76,13 +76,13 @@ WSGI_APPLICATION = 'p1_smsproject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'SMS',
-        'HOST':'database-1.c5nimunulnzg.ap-south-1.rds.amazonaws.com',
-        'USER':'admin',
-        'PASSWORD':'sms12345',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME':'SMS',
+        'USER': 'admin',
+        'PASSWORD': 'sms12345',
+        'HOST': 'database-2.c5nimunulnzg.ap-south-1.rds.amazonaws.com',
         'PORT': '3306',
-    },
+    }
 }
 
 
